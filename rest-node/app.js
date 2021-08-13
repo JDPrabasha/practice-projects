@@ -11,7 +11,7 @@ app.use(express.json());
 mongoose.connect('mongodb://localhost/motivation',{
     useNewUrlParser: true,
     useUnifiedTopology: true
-});
+}, ()=>console.log("db connected"));
 
 const db = mongoose.connection;
 
